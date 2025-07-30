@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Control2.css">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/menu" method="POST">
+        <div class="menu-container">
+            <img src="logo.png" width="400" alt="Imagen centrada">
+        </div>
+    <h2>Menu</h2>
+    <label for="Contratista In House">Contratista In House</label>
+    <input type="checkbox" id="nombre" name="nombre" required>
+    <br>
+    <input type="text" id="nombre" name="nombre" required>
+    <br>
+    <label for="Contratista Ocacional">Contratista Ocacional</label>
+    <input type="checkbox" id="nombre" name="nombre" required>
+    <br>
+    <input type="text" id="nombre" name="nombre" required>
+    <br>
+    <label for="Visitante">Visitante</label>
+    <input type="checkbox" id="nombre" name="nombre" required>
+    <br>
+    <input type="text" id="nombre" name="nombre" required>
+
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+
+  <!-- jQuery y jQuery UI -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+
+  <script>
+    $(function () {
+      // Activar el datepicker en el input con id="fecha"
+      $("#fecha").datepicker({
+        dateFormat: "dd/mm/yy", // Formato de fecha
+        changeMonth: true,
+        changeYear: true
+      });
+    });
+  </script>
+</head>
+
+<form action="">
+  <h2>Seleccione una fecha:</h2>
+  <input type="text" id="fecha" placeholder="Haz clic para elegir una fecha">
+</form>
+
+  <h2>Consultar</h2>
+
+  <form action="#" method="post" target="_blank">
+    <input type="text" name="q" placeholder="Id" required>
+    <br>
+    <br>
+    <button type="submit">Buscar</button>
+  </form>
+<body>
+
+    <h2>Adjuntar Archivo</h2>
+    <form action="subir_archivo.php" method="post" enctype="multipart/form-data">
+        <br>
+        <label for="archivo">Selecciona un archivo:</label><br>
+        <br>
+        <input type="file" name="archivo" id="archivo" required>
+        <br>
+        <br>
+        <input type="submit" value="Subir archivo">
+    </form>
+
+</body>
+</body>
+</html>

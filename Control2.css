@@ -1,0 +1,46 @@
+body {
+      background: hwb(182 57% 12%);
+      font-family: Arial, sans-serif;
+      justify-content: center;
+      align-items: center;
+      height: 90vh;
+      margin: 90px;
+    }
+
+
+form {
+      text-align: center;
+      margin-top: 10px;
+}
+script {
+      text-align: center;
+      margin-top: 10px;
+}
+h2 {
+      text-align: center;
+      margin-top: 10px;
+}
+label {
+      text-align: right;
+      margin-top: 100px;
+    
+}
+input[type="text"] {
+     text-align: center;
+     margin-top: 100px;
+     width: 400px;
+     padding: 10px;
+     margin: 8px 0; 
+}
+input[type="checkbox"] {
+      text-align: right;
+      margin-top: 10px;
+      width: 94px;
+      padding: 10px;
+      margin: 8px 0;
+}
+input[type="file"] {
+      text-align: right;
+      margin-top: 10px;
+
+}
