@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Control.css">
+    <title>App Control Acces-Visitante</title>
+</head>
+<body>
+    <div class="login-container">
+    <img src="logo.png" width="400">
+        <form action="/Visitante.html" method="POST">
+    <h2>Visitante</h2>
+    <br>
+    <br>
+    <label form="nombre" class="etiqueta">Nombre Empressa Visitante</label>
+    <br>
+      <input type="text" id="nombre" name="nombre" required>
+    <br>
+
+    <label for="nombre" class="etiqueta">Seleciona una Fecha para la Visita</label>
+    
+    <input type="text" id="fecha" placeholder="Haz clic para elegir una fecha">
+
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    
+
+  <!-- jQuery y jQuery UI -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+
+  <script>
+    $(function () {
+      // Activar el datepicker en el input con id="fecha"
+      $("#fecha").datepicker({
+        dateFormat: "dd/mm/yy", // Formato de fecha
+        changeMonth: true,
+        changeYear: true
+      });
+    });
+  </script>
+        <form action="subir_archivo.php" method="post" enctype="multipart/form-data">
+        <br>
+        <label for="archivo" class="etiqueta">Selecciona un archivo:</label><br>
+        <br>
+        <input type="file" name="archivo" id="archivo" required>
+        <br>
+        <br>
+        <input type="submit" value="Subir archivo">
+        <br>
+        <br>
+        <br>
+        <button type="submit">Buscar</button>
+        <br>
+        <br>
+      <p><a href="Menu.html">Ir al Menu</a></p>
+      <br>
+      <p><a href="login.html">Cerrar Sesión</a></p>  
+    </form>
+    <br>
+    <p>Contactanos controlacces@2025.com</p>
+    </div>
+</body>
+</html>

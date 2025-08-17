@@ -3,27 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App Control Acces-Registro</title>
     <link rel="stylesheet" href="Control.css">
-    <title>Document</title>
 </head>
 <body>
 <div class="login-container">
-  <form action="/registro" method="POST">
-    <img src="logo.png" width="400">
+  <form action="login.html" method="get">
+    <img src="logo.png" alt="Logo de la aplicación" width="400">
     <h2>Registro</h2>
+
     <label for="nombre">Nombre completo</label>
-    <input type="text" id="nombre" name="nombre" required>
+    <input type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre" required>
 
     <label for="email">Correo electrónico</label>
-    <input type="email" id="email" name="email" required>
+    <input type="email" id="email" name="email" placeholder="ejemplo@correo.com" required>
 
     <label for="password">Contraseña</label>
-    <input type="password" id="password" name="password" required>
+    <input type="password" id="password" name="password" placeholder="Mínimo 6 caracteres" minlength="6" required>
 
     <label for="confirmar">Confirmar contraseña</label>
-    <input type="password" id="confirmar" name="confirmar" required>
-    <input type="submit" value="Registrarse">
-    <a href=""></a>
+    <input type="password" id="confirmar" name="confirmar" placeholder="Repite tu contraseña" required>
+
+    <input type="submit" value="Registrarse" class="btn-registrar">
+
+    <p>¿Ya tienes cuenta? <a href="login.html">Inicia sesión</a></p>
   </form>
 </div>
 </body>
