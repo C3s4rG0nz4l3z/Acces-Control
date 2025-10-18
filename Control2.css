@@ -1,43 +1,40 @@
 body {
-      background: hwb(182 57% 12%);
-      font-family: Arial, sans-serif;
-      justify-content: center;
-      align-items: center;
-      height: 90vh;
-      margin: 90px;
-     }
+    background: hwb(182 57% 12%);
+    font-family: Arial, sans-serif;
+    display: flex;                /* Necesario para centrar */
+    justify-content: center;
+    align-items: center;
+    height: 100vh;                /* Pantalla completa */
+    margin: 0;
+}
+
 form {
-      text-align: center;
-      margin-top: 10px;
+    text-align: center;
+    margin-top: 10px;
 }
-script {
-      text-align: center;
-      margin-top: 10px;
-}
+
 h2 {
-      text-align: center;
-      margin-top: 10px;
+    text-align: center;
+    margin-bottom: 20px;
 }
+
 label {
-      text-align: right;
-      margin-top: 100px;
-    
+    display: block;               /* Hace que el label ocupe toda la línea */
+    margin: 10px 0 5px;
+    text-align: left;             /* Mejor alineado al campo */
 }
+
 input[type="text"] {
-     text-align: center;
-     margin-top: 100px;
-     width: 400px;
-     padding: 10px;
-     margin: 8px 0; 
+    width: 400px;
+    padding: 10px;
+    margin: 8px 0; 
+    text-align: center;
 }
+
 input[type="checkbox"] {
-      text-align: right;
-      margin-top: 0px;
-      width: 94px;
-      padding: 10px;
-      margin: 8px 0;
+    margin: 8px 5px;
 }
+
 input[type="file"] {
-      text-align: right;
-      margin-top: 10px;
+    margin-top: 10px;
 }

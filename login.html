@@ -1,33 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="Control.css">
-    <title>App Control Acces- Inicio</title>
+    <title>App Control Access - Inicio</title>
 </head>
 <body>
     <div class="login-container">
-    <img src="logo.png" width="400">
-    <h2>Iniciar Sesión</h2>
-    <form action="Menu.html" method="get">
-      <input type="text" name="usuario" placeholder="Usuario" required>
-      <input type="password" name="contrasena" placeholder="Contraseña" required>
-      <input type="submit" value="Ingresar"> 
+        <img src="logo.png" width="400" alt="Logo de la aplicación">
+        <h2>Iniciar Sesión</h2>
 
-    </form>
-    <br>
-    <p>¿No tienes cuenta? <a href="registrarse.html">Regístrate</a></p>
-    <br>
-    <form>
-        <label>He leido y estoy de acuerdo con la politica de privacidad de datos </label>
-        <input type="checkbox">
-    </form>
-    <br>
-    <p>Contactanos controlacces@2025.com</p>
+        <form class="formulario" action="datos.php" method="POST">
+            <label for="usuario">Usuario</label>
+            <input type="text" id="usuario" name="usuario" placeholder="usuario" required>
+
+            <label for="contraseña">Contraseña</label>
+            <input type="password" id="contrasena" name="contrasena" placeholder="contrasena" required>
+
+            <label for="privacidad">
+            <input type="checkbox" id="privacidad" name="privacidad" required>
+                He leído y estoy de acuerdo con la política de privacidad de datos
+            </label>
+
+            <input type="submit" value="Ingresar">
+        </form>
+
+        <div id="mensaje">
+            <?php if(isset($_GET['mensaje'])) echo $_GET['mensaje']; ?>
+        </div>
+
+        <p>¿No tienes cuenta? <a href="registrarse.html">Regístrate</a></p>
+        <p>Contáctanos: <a href="mailto:controlacces@2025.com">controlacces@2025.com</a></p>
     </div>
-</body>
-<footer>
 
-</footer> 
+    <footer>
+        <!-- Puedes agregar contenido de pie de página aquí si lo necesitas -->
+    </footer>
+</body>
 </html>
+

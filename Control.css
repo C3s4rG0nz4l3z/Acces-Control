@@ -1,108 +1,82 @@
-   body {
-      background: hwb(182 57% 12%);
-      font-family: Arial, sans-serif;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-    }
+body {
+  background: hwb(182 57% 12%);
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
 
-    .login-container {
-      background: hsl(30, 17%, 91%);
-      padding: 100px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      width: 400px;
-    }
+.login-container {
+  background: hsl(30, 17%, 91%);
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+}
 
-    .login-container h2 {
-      text-align: center;
-      margin-bottom: 10px;
-    }
+.login-container h2, 
+.login-container h3 {
+  text-align: center;
+  margin-bottom: 20px;
+}
 
-    .login-container input[type="text"],
-    .login-container input[type="password"] {
-      width: 94;
-      padding: 10px;
-      margin: 8px 0;
-      border: 1px solid #ebeaee;
-      border-radius: 5px;
-      justify-content: center;
-    }
+.login-container input[type="text"],
+.login-container input[type="email"],
+.login-container input[type="password"] {
+  width: 94%;
+  padding: 10px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
 
-    .login-container input[type="submit"] {
-      width: 94;
-      padding: 10px;
-      background: #1166c1;
-      color: white;
-      border: none;
-      border-radius: 10px;
-      cursor: pointer;
-      justify-content: center;
-    }
+.login-container input[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  background: #1166c1;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
 
-    .login-container input[type="submit"]:hover {
-      background: #0056b3;
-    }
-    .login-container form {
-      text-align: center;
-      margin-top: 10px;
-    }
-    .login-container p {
-      text-align: center;
-      margin-top: 10px;
-    }
-    
-    h2 , h3 {
-      text-align: center;
-      margin-bottom: 20px;
-    }
-    input[type="text"],
-    input[type="email"],
-    input[type="password"] {
-      width: 94%;
-      padding: 10px;
-      margin: 8px 0;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-    }
-    input[type="submit"] {
-      width: 100%;
-      padding: 10px;
-      background-color: #0056b3;
-      border: none;
-      color: white;
-      font-weight: bold;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-    input[type="submit"]:hover {
-      background-color: #0056b3;
-    }
-    .login-logo {
-       max-width: 200px; /* ajusta el tamaño máximo */
-       height: auto;
-    }
-    .opcion {
-      display: flex;
-      align-items: center;
-      margin-bottom: 10px;
-    }
-    .opcion input[type="radio"] {
-      margin-right: 8px; /* espacio entre checkbox y el texto */
-      transform: scale(2); /* aumenta el tamaño 1.5 veces */
-    }
-    .login-container {
-      max-width: 400px;
-      margin: auto;
-      text-align: center;
-    }
-    form {
-      text-align: left; /* contenido del formulario alineado a la izquierda */
-      margin-top: 20px;
-    }
-    .etiqueta {
-      font-size: 18px; /* Cambia el valor según el tamaño que quieras */
-      font-weight: bold; /* Opcional, para ponerlo en negrita */
-    }
-   
+.login-container input[type="submit"]:hover {
+  background: #0056b3;
+}
+
+.login-container p {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.login-logo {
+  max-width: 200px;
+  height: auto;
+}
+
+.opcion {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.opcion input[type="radio"] {
+  margin-right: 8px;
+  transform: scale(1.5); /* tamaño radio más grande */
+}
+
+.etiqueta {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+form {
+  text-align: left;
+  margin-top: 20px;
+}
