@@ -1,7 +1,7 @@
 <?php
 include "conexion.php"; 
  // capturar datos del formulario
-$tipo_usuario = $_POST ['opcion'];
+$tipo_empresa = $_POST ['opcion'];
 
 // crear la instancia de la conexion
 
@@ -16,7 +16,7 @@ if (isset($_POST['opcion'])) {
     $tipo_usuario = $conn->real_escape_string($_POST['opcion']);
 
     // Insertar en la base de datos
-    $sql = "INSERT INTO registros_ingreso (tipo_usuario) VALUES ('$tipo_usuario')";
+    $sql = "INSERT INTO tipo_empresa (tipo_usuario) VALUES ('$tipo_usuario')";
 
     if ($conn->query($sql) === TRUE) {
         // Redirigir según la opción seleccionada
