@@ -9,7 +9,7 @@ $conn = $conexion->getConexion();
 $usuario = $_POST['usuario'];
 $contrasena = $_POST['contrasena'];
 
-$sql = "select  * from usuarios where usuario='$usuario' and contrasena='$contrasena'";
+$sql = "select  * from usuario where usuario='$usuario' and contrasena='$contrasena'";
 
 $result = $conn->query($sql);
 

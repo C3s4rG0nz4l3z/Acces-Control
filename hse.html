@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="Control.css">
+  <title>App HSE - Estado</title>
+</head>
+<body>
+  <div class="hse-container">
+    <img src="logo.png" width="400">
+    <h2>HSE</h2>
+    <h3>Selecciona el estado</h3> 
+    <br>
+    <form id="hseFormulario" action="hse.php" method="POST">
+      
+      <!-- Radios -->
+      <div class="opcion">
+        <input type="radio" id="aprobado" name="resultado" value="Aprobado">
+        <label for="aprobado" class="etiqueta">Aprobado ✅</label>
+      </div>
+      <br>
+      <div class="opcion">
+        <input type="radio" id="rechazado" name="resultado" value="Rechazado">
+        <label for="rechazado" class="etiqueta">Rechazado ❌</label>
+      </div>
+      <br><br>
+
+      <!-- Select desplegable -->
+      <label for="estado">Consultar estado:</label>
+      <select id="estado" name="estado">
+        <option value="">-- Selecciona --</option>
+        <option value="Pendiente">Pendiente</option>
+        <option value="En revisión">En revisión</option>
+        <option value="Finalizado">Finalizado</option>
+      </select>
+      <br><br>
+
+      <!-- Casilla para número de ticket -->
+      <label for="ticket">Número de Ticket:</label>
+      <input type="number" id="ticket" name="ticket" placeholder="Ingrese el número de ticket" min="1" step="1">
+      <br><br>
+
+      <input type="submit" value="Guardar">
+      <br><br>
+      <p><a href="login.html">Cerrar Sesión</a></p>
+    </form>
+
+    <script>
+      document.getElementById("hseFormulario").addEventListener("submit", function(event) {
+        // Verifica si algún radio está seleccionado
+        const radios = document.querySelectorAll('input[name="resultado"]');
+        let seleccionado = false;
+
+        radios.forEach(radio => {
+          if (radio.checked) {
+            seleccionado = true;
+          }
+        });
+
+        if (!seleccionado) {
+          event.preventDefault(); 
+          alert("Por favor selecciona Aprobado o Rechazado antes de guardar.");
+        }
+
+        // Verifica si se seleccionó un estado en el desplegable
+        const estado = document.getElementById("estado").value;
+        if (estado === "") {
+          event.preventDefault();
+          alert("Por favor selecciona un estado en la lista.");
+        }
+
+        // Verifica si se ingresó un número de ticket
+        const ticket = document.getElementById("ticket").value.trim();
+        if (ticket === "") {
+          event.preventDefault();
+          alert("Por favor ingresa el número de ticket.");
+        }
+      });
+
+      // Reset al cargar
+      window.onload = function() {
+        document.querySelectorAll('input[name="resultado"]').forEach(radio => {
+          radio.checked = false;
+        });
+        document.getElementById("estado").selectedIndex = 0;
+        document.getElementById("ticket").value = "";
+      };
+    </script>
+
+    <br>
+    <p>Contáctanos: <a href="mailto:hse@2025.com">hse@2025.com</a></p>
+  </div>
+
+  <footer>
+    <!-- Pie de página -->
+  </footer> 
+</body>
+</html>

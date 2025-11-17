@@ -13,7 +13,7 @@ include "conexion.php";
  $conn = $conexion->getConexion();
 
  //consulta sql para insertar datos
- $sql = "INSERT INTO usuarios (usuario, contrasena, confirmar_contrasena, email) VALUES ('$usuario', '$contrasena', '$confirmar_contrasena', '$email')";
+ $sql = "INSERT INTO usuario (usuario, contrasena, confirmar_contrasena, email) VALUES ('$usuario', '$contrasena', '$confirmar_contrasena', '$email')";
 
  if ($conn->query($sql) === TRUE) {
    
